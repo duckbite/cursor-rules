@@ -1,0 +1,56 @@
+---
+description: When editing CloudFormation templates, always validate the template using cfn-lint before attempting deployment. This catches syntax errors, resource validation issues, and best practices violations early in the development process, preventing deployment failures and saving time. Apply this rule when creating or modifying CloudFormation templates (.yml/.yaml files), before any AWS infrastructure deployment, or when debugging CloudFormation deployment failures. This rule ensures template quality and prevents costly deployment mistakes.
+globs: *.yml, *.yaml, infrastructure/*.yml, infrastructure/*.yaml
+alwaysApply: false
+tags: [cloudformation, validation, infrastructure, aws]
+priority: 2
+---
+
+# CloudFormation Template Validation
+
+## Context
+
+- When creating or modifying CloudFormation templates (.yml/.yaml files)
+- Before any AWS infrastructure deployment
+- When debugging CloudFormation deployment failures
+
+## Requirements
+
+- ALWAYS run `cfn-lint <template-file>` after editing CloudFormation templates
+- Fix all cfn-lint errors before attempting deployment
+- Install cfn-lint if not available: `pip install cfn-lint`
+- Treat cfn-lint warnings as errors in production templates
+- Use `cfn-lint --format pretty` for better readability
+
+## Examples
+
+<example>
+Good: Validate template before deployment
+```bash
+# Edit template
+vim infrastructure/s3.yml
+# Validate template
+cfn-lint infrastructure/s3.yml
+# Fix any errors, then deploy
+aws cloudformation deploy --template-file infrastructure/s3.yml
+```
+</example>
+
+<example type="invalid">
+Bad: Deploy without validation
+```bash
+# Edit template
+vim infrastructure/s3.yml
+# Deploy directly (may fail)
+aws cloudformation deploy --template-file infrastructure/s3.yml
+```
+</example>
+
+## Critical Points
+
+<critical>
+  - ALWAYS validate CloudFormation templates with cfn-lint before deployment
+  - NEVER attempt deployment with cfn-lint errors
+  - INSTALL cfn-lint if not available in the environment
+  - TREAT cfn-lint warnings as errors for production templates
+</critical>

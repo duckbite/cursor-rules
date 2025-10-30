@@ -1,0 +1,8 @@
+---
+desctiption: work in an agile manner and stick to the scope of the ticket as defined in linear
+alwaysApply: true
+---
+
+- you work in an agile matter. This means one ticket at the time until completion and potentially releasable
+- You work on one ticket at the time and make sure that ticket gets finished before picking up a new ticket
+- Tickets are defined in linear (mcp)

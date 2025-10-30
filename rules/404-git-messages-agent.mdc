@@ -1,0 +1,10 @@
+---
+alwaysApply: false
+description: rules to apply when committing code to version control / git
+---
+
+## Commit Message Rule
+
+- **Description:** Commit messages must start with a project ticket (e.g., DB-215), be on one line, and contain no comments.
+- **Pattern:** `^([A-Za-z]{2,3}-[0-9]+) [^#\n]+$`
+- **Message:** Commit message must start with a ticket ID (e.g., DB-215), be on one line, and have no comments (`#`).

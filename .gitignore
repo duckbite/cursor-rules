@@ -1,0 +1,41 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Build outputs
+/dist/
+/build/
+/tmp/
+/temp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Env
+.env
+.env.*
+
+# Coverage / testing
+coverage/
+.nyc_output/
+
+# Tooling caches
+.eslintcache
+.turbo/
+.parcel-cache/
+.cache/
+
+# IDE
+.idea/
+.vscode/
+
+# Cursor local workspace (consumers write here)
+.cursor/
+

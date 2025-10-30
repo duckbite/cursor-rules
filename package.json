@@ -1,0 +1,38 @@
+{
+  "name": "@duckbite/cursor-rules",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "npx CLI to pull curated Cursor rules into your project",
+  "bin": {
+    "cursor-rules": "bin/cursor-rules.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "duckbite",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duckbite/cursor-rules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/duckbite/cursor-rules/issues"
+  },
+  "homepage": "https://github.com/duckbite/cursor-rules#readme",
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cursor",
+    "rules",
+    "cli",
+    "npx"
+  ]
+}

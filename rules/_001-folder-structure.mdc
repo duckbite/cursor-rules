@@ -1,0 +1,51 @@
+---
+alwaysApply: always
+description: folder structure to use when scaffolding the application
+---
+
+- Each app or shared library in its own folder
+- Store test with the code
+
+## Folder Structure (authorative)
+
+```
+repo-root/
+├─ apps/ # User-facing deployables (any language)
+│ ├─ web/ # e.g. React app (TS)
+│ ├─ mobile/ # e.g. React Native app (TS)
+│ └─ admin/ # another app
+├─ services/ # micro services each in their own folder
+│ ├─ service-with-descriptive-name/
+│ └─ other-service-with-descriptive-name/
+├─ workers/ # Batch/cron/queue consumers
+│ ├─ importer/ # Python worker
+│ └─ email/ # Node/TS worker
+├─ shared/ # All shared code/assets by type/language
+│ ├─ typescript/
+│ │ ├─ ui/ # React component lib (example)
+│ │ └─ utils/ # TS utilities
+│ ├─ python/
+│ │ └─ common/ # Py domain models/clients
+│ ├─ schemas/ # OpenAPI/GraphQL/JSON Schema, language-agnostic
+│ │ ├─ openapi/
+│ │ ├─ graphql/
+│ │ └─ jsonschema/
+│ ├─ protos/ # Protobuf IDL (optional)
+│ ├─ sql/ # Reusable SQL (views/functions)
+│ └─ assets/ # Logos/fonts/copy/etc.
+├─ tools/ # Codegen, release, misc scripts
+│ ├─ codegen/
+│ └─ release/
+├─ infra/ # IaC / deploy / Docker (optional)
+│ ├─ k8s/
+│ ├─ terraform/
+│ └─ docker/
+├─ .github/ # CI, CODEOWNERS
+├─ .vscode/ # Editor settings
+├─ turbo.json
+├─ pnpm-workspace.yaml
+├─ package.json # Root scripts only (no runtime deps)
+├─ tsconfig.base.json # If using TS
+├─ .editorconfig
+└─ .env.example
+```
