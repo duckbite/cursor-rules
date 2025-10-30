@@ -1,4 +1,5 @@
 import { runPull } from './commands/pull.mjs';
+import { runInteractive } from './commands/interactive.mjs';
 
 function parseTopLevel(argv) {
   const [maybeCmd, ...rest] = argv;
@@ -15,6 +16,9 @@ export async function main(argv) {
     case undefined:
       await runPull(args);
       break;
+    case 'interactive':
+      await runInteractive(args);
+      break;
     case 'help':
     case '--help':
     case '-h':
@@ -27,7 +31,7 @@ export async function main(argv) {
 }
 
 function printHelp(exitCode = 0) {
-  console.log(`cursor-rules <command> [options]\n\nCommands:\n  pull               Pull all rules into destination (default)\n\nOptions (pull):\n  --dest <path>      Destination directory (default ./.cursor/rules)\n  --branch <name>    Git branch to fetch from (default main)\n  --repo <owner/repo>Source repo (default duckbite/cursor-rules)\n  --dry-run          Preview without writing files\n  --no-overwrite     Skip existing files\n  --force            Overwrite existing files\n  --help             Show this help\n`);
+  console.log(`cursor-rules <command> [options]\n\nCommands:\n  pull               Pull all rules into destination (default)\n  interactive        Select specific rules to pull\n\nOptions (pull/interactive):\n  --dest <path>      Destination directory (default ./.cursor/rules)\n  --branch <name>    Git branch to fetch from (default main)\n  --repo <owner/repo>Source repo (default duckbite/cursor-rules)\n  --dry-run          Preview without writing files\n  --no-overwrite     Skip existing files\n  --force            Overwrite existing files\n  --help             Show this help\n`);
   if (exitCode) process.exit(exitCode);
 }
 

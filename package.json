@@ -1,6 +1,6 @@
 {
   "name": "@duckbite/cursor-rules",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
   "description": "npx CLI to pull curated Cursor rules into your project",
@@ -34,5 +34,8 @@
     "rules",
     "cli",
     "npx"
-  ]
+  ],
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.1"
+  }
 }

@@ -28,10 +28,12 @@ Environment:
 
 - `GITHUB_TOKEN` (optional) to avoid rate limits or access private repos.
 
-### Interactive (v1, upcoming)
+### Interactive mode
 
 ```bash
-cursor-rules interactive --dest ./.cursor/rules
+npx @duckbite/cursor-rules@latest interactive --dest ./.cursor/rules
 ```
 
-Select specific rules to pull using a checkbox UI.
+- Use the search prompt to filter the list.
+- Select specific rules to pull using checkboxes.
+- Supports the same flags as `pull`.
