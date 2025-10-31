@@ -1,5 +1,6 @@
 ---
-desctiption: work in an agile manner and stick to the scope of the ticket as defined in linear
+description:
+globs:
 alwaysApply: true
 ---
 

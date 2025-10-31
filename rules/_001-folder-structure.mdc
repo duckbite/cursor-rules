@@ -1,6 +1,7 @@
 ---
-alwaysApply: always
 description: folder structure to use when scaffolding the application
+globs:
+alwaysApply: true
 ---
 
 - Each app or shared library in its own folder

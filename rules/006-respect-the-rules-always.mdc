@@ -1,5 +1,5 @@
 ---
-description: Enforce architectural guidelines by following established architecture documents and consulting with the user for deviations or changes. Apply this rule when making architectural decisions, implementing new features, or when no architecture document exists for the project.
+description:
 globs:
 alwaysApply: true
 tags: [architecture, guidelines, design, patterns]

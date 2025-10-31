@@ -1,6 +1,6 @@
 ---
-description: how to comment
-globs: ['**/src/**']
+description:
+globs: **/src/**
 alwaysApply: false
 ---
 

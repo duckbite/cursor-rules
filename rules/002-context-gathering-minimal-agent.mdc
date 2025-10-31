@@ -1,7 +1,7 @@
 ---
 description: When operating within a large codebase using advanced Generative AI patterns and libraries, this rule ensures efficient context gathering using Cursor IDE tools. Apply this rule when you need to understand codebase structure, identify relevant libraries, or gather context for coding tasks. This rule prevents defaulting to outdated patterns while ensuring you use the latest 2025 updates and releases, and maximizes rapid context gathering through parallelized discoveries.
 globs:
-alwaysApply: true
+alwaysApply: false
 tags: [core, context, search, efficiency]
 priority: 2
 ---

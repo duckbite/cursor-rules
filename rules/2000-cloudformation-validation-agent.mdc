@@ -1,6 +1,6 @@
 ---
 description: When editing CloudFormation templates, always validate the template using cfn-lint before attempting deployment. This catches syntax errors, resource validation issues, and best practices violations early in the development process, preventing deployment failures and saving time. Apply this rule when creating or modifying CloudFormation templates (.yml/.yaml files), before any AWS infrastructure deployment, or when debugging CloudFormation deployment failures. This rule ensures template quality and prevents costly deployment mistakes.
-globs: *.yml, *.yaml, infrastructure/*.yml, infrastructure/*.yaml
+globs:
 alwaysApply: false
 tags: [cloudformation, validation, infrastructure, aws]
 priority: 2

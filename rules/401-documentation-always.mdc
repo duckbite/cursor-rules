@@ -1,4 +1,6 @@
 ---
+description:
+globs:
 alwaysApply: true
 ---
 

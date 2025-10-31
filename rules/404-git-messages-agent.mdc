@@ -1,6 +1,7 @@
 ---
-alwaysApply: false
 description: rules to apply when committing code to version control / git
+globs:
+alwaysApply: false
 ---
 
 ## Commit Message Rule
