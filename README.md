@@ -37,3 +37,22 @@ npx @duckbite/cursor-rules@latest interactive --dest ./.cursor/rules
 - Use the search prompt to filter the list.
 - Select specific rules to pull using checkboxes.
 - Supports the same flags as `pull`.
+
+### Update mode
+
+```bash
+npx @duckbite/cursor-rules@latest update --dest ./.cursor/rules
+```
+
+- Compares remote rules with local files.
+- Shows colored diffs for changed files.
+- Interactive prompts for each file:
+  - **New files**: Ask to install (yes/no)
+  - **Changed files**: Choose to view diff, overwrite, or skip
+- Automatically skips unchanged files.
+- Shows summary of actions taken.
+
+Options:
+- `--dest <path>`: destination directory (default `.cursor/rules`)
+- `--branch <name>`: Git branch to fetch (default `main`)
+- `--repo <owner/repo>`: source repo (default `duckbite/cursor-rules`)

@@ -1,4 +1,4 @@
-import { mkdir, writeFile as fsWriteFile, access } from 'node:fs/promises';
+import { mkdir, writeFile as fsWriteFile, access, readFile as fsReadFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { constants as fsConstants } from 'node:fs';
 
@@ -12,6 +12,18 @@ export async function exists(filePath) {
     return true;
   } catch {
     return false;
+  }
+}
+
+export async function readFile(filePath) {
+  try {
+    const content = await fsReadFile(filePath, 'utf8');
+    return content;
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      return null;
+    }
+    throw error;
   }
 }
 
